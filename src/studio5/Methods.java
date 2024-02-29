@@ -59,7 +59,7 @@ public class Methods {
 		
 
 		// Yellow ring with 1.0/4.0 the radius
-		StdDraw.setPenColor(StdDraw.ORANGE);
+		StdDraw.setPenColor(StdDraw.YELLOW);
 		StdDraw.filledCircle(x, y, 1.0/4.0*radius);
 		// suggested rgb values: 255, 255, 109
 
@@ -80,7 +80,16 @@ public class Methods {
 	public static String substituteAll(String source, char target, String replacement) {
 		String result = "";
 		// TODO: Finish this method
-		
+		char[] Dragon = source.toCharArray();
+		for (int i = 0; i < Dragon.length; i++) {
+			if (Dragon[i] == target) {
+				result+= replacement;
+			}
+			else {
+				result+= Dragon[i];
+			}
+			
+		}
 		return result;
 	}
 
